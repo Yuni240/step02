@@ -26,6 +26,8 @@ public class PlayerState : MonoBehaviour
         if (health<=0)
         {
             health=0;
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
+
             Destroy(gameObject);
         }
     }

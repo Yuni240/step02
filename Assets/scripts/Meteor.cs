@@ -35,11 +35,13 @@ public class Meteor : Enemy
         {
        // Destroy(otherCollision.gameObject);
        PlayerState Player=otherCollision.GetComponent<PlayerState>();
-            Player.PlayerTakeDamage(damage);   
-            
+            Player.PlayerTakeDamage(damage);
+           // Instantiate(explosionPrefab, transform.position, transform.rotation);
 
 
-             Destroy(gameObject);
+
+
+            Destroy(gameObject);
         }
         
     }
