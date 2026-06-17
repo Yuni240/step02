@@ -4,6 +4,8 @@ public class Enemy : MonoBehaviour
 {
    [SerializeField] protected float Health;
     [SerializeField] protected  Rigidbody2D rb;
+    [SerializeField] protected float damage;
+    [SerializeField] protected GameObject explosionPrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

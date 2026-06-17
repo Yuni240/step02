@@ -106,10 +106,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146b7e9d19165d341917b1beacd93404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meteor
-  Health: 0
+  Health: 3
   rb: {fileID: 5640875955837778013}
+  damage: 1
+  explosionPrefab: {fileID: 166901331625077302}
   minSpeed: 8
   maxSpeed: 15
+  rotateSpeed: 100
 --- !u!50 &5640875955837778013
 Rigidbody2D:
   serializedVersion: 5
