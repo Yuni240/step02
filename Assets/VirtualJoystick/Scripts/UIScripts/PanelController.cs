@@ -5,7 +5,7 @@ public class PanelController : MonoBehaviour
     [SerializeField] private CanvasGroup cGroup;
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject loseScreen;
-
+    private PanelController panelCntroller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,4 +31,5 @@ public class PanelController : MonoBehaviour
         cGroup.alpha = 1;
         loseScreen.SetActive(true);
     }
+    
 }
