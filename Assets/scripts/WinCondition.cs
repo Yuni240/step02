@@ -1,0 +1,27 @@
+using UnityEngine;
+
+public class WinCondition : MonoBehaviour
+{
+    private float timer;
+    [SerializeField] private float possibleWinTime;
+    [SerializeField] private GameObject[] spawner;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+      timer += Time.deltaTime;
+        if (timer >= possibleWinTime)
+        {
+            for (int i= 0; i<spawner.Length; i++)
+            {
+                spawner[i].SetActive(false);
+            }
+        }
+    }
+}
