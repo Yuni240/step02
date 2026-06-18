@@ -31,8 +31,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void EnemySpawn()
     {
+        enemyTimer += Time.deltaTime;
 
-        enemySpawnTime = Time.deltaTime;
+        //enemySpawnTime = Time.deltaTime;
 
         if (enemyTimer >= enemySpawnTime)
         {

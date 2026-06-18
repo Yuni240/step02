@@ -38,7 +38,8 @@ public class PlayerState : MonoBehaviour
         {
 
             EndGameManager.endManager.gameOver=true;
-            health =0;
+            EndGameManager.endManager.StartResolveSequence();
+           
             Instantiate(explosionPrefab, transform.position, transform.rotation);
 
             Destroy(gameObject);

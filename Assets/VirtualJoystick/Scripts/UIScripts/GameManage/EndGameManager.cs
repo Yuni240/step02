@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EndGameManager : MonoBehaviour
@@ -5,7 +6,7 @@ public class EndGameManager : MonoBehaviour
     public static EndGameManager endManager;
     public bool gameOver;
 
-    private PanelController panelCntroller;
+    private PanelController panelController;
     void Awake()
     {
         {
@@ -24,18 +25,45 @@ public class EndGameManager : MonoBehaviour
     {
         
     }
+
+    public void StartResolveSequence()
+    {
+
+        StopCoroutine(nameof(ResolveSequence));
+
+        StartCoroutine(ResolveSequence());
+    }
+
+    private IEnumerator ResolveSequence()
+    {
+        yield return new WaitForSeconds(2f);
+        ResolveGame();
+    }
+
+    public void ResolveGame()
+    {
+        if (gameOver==false)
+        {
+            winGame();
+        }
+        else
+        {
+            LoseGame();
+        }
+    }
     public void winGame()
     {
         
+       panelController.ActivateWin();
+    }
+    public void LoseGame() { 
+    
+    panelController.ActivateLose();
 
     }
-    public void CloseGame() { 
-    
-    
-    
-    }public void RegisterPanelController(PanelController panel)
+    public void RegisterPanelController(PanelController pC)
     {
-        panelCntroller = panel;
+        panelController = pC;
 
     }
 }
