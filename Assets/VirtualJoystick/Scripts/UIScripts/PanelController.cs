@@ -9,7 +9,7 @@ public class PanelController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        EndGameManager.endManager.RegisterPanelController(this);
     }
 
     // Update is called once per frame
@@ -23,13 +23,14 @@ public class PanelController : MonoBehaviour
     public void ActivateLose()
     {
         cGroup.alpha = 1;
-        winScreen.SetActive(true);
+        cGroup.interactable = true;
+        loseScreen.SetActive(true);
 
     }
-    public void ActivateLose(string text)
+    /*public void ActivateLose(string text)
     {
         cGroup.alpha = 1;
         loseScreen.SetActive(true);
-    }
+    }*/
     
 }
