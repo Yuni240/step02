@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ec9f38a62a0af419219e728aa21450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinCondition
-  possibleWinTime: 0
+  possibleWinTime: 20
   spawner: []
 --- !u!1 &165213197
 GameObject:
@@ -3427,7 +3427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Crystal.SafeArea
   ConformX: 1
   ConformY: 1
-  Logging: 0
+  Logging: 1
 --- !u!1 &1680657036
 GameObject:
   m_ObjectHideFlags: 0
