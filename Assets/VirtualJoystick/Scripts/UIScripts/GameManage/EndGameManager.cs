@@ -10,6 +10,9 @@ public class EndGameManager : MonoBehaviour
 
     private TextMeshProUGUI scoreTextComponent;
     private int score;
+    public string LvlUnlock = "LevelUnlock";
+
+    [HideInInspector]
 
 
     private PanelController panelController;
@@ -77,6 +80,13 @@ public class EndGameManager : MonoBehaviour
 
         ScoreSet();
        panelController.ActivateWin();
+
+        int nextLevel=SceneManager.GetActiveScene().buildIndex +1;
+
+        if (nextLevel > PlayerPrefs.GetInt(LvlUnlock, 0))
+        {
+            PlayerPrefs.SetInt(LvlUnlock, nextLevel);
+        }
     }
     public void LoseGame() {
 
