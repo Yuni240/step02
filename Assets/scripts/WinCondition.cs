@@ -16,15 +16,24 @@ public class WinCondition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      timer += Time.deltaTime;
+
+        if (EndGameManager.endManager.gameOver==true)
+        {
+            return;
+        }
+        timer += Time.deltaTime;
         if (timer >= possibleWinTime)
         {
             for (int i= 0; i<spawner.Length; i++)
             {
                 spawner[i].SetActive(false);
             }
+
+            
+            // gameObject.SetActive(false);
+            EndGameManager.endManager.ResolveGame();
             gameObject.SetActive(false);
-          EndGameManager.endManager.ResolveGame();
+
         }
     }
 }

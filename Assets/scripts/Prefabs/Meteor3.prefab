@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8958377048274460581}
   m_Layer: 7
   m_Name: Meteor3
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   rb: {fileID: 7334934551181824459}
   damage: 1
   explosionPrefab: {fileID: 166901331625077302, guid: 8f21fa18181a2e248b9f37d4a1f173a2, type: 3}
+  anim: {fileID: 0}
   minSpeed: 8
   maxSpeed: 15
   rotateSpeed: 100
