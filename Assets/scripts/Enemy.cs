@@ -8,6 +8,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected GameObject explosionPrefab;
     [SerializeField] protected Animator anim;
 
+    [Header("Score"), SerializeField]
+    protected int scoreValue;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,6 +40,7 @@ public class Enemy : MonoBehaviour
     }
     public virtual void DeathSequence()
     {
+        EndGameManager.endManager.UpdateScore(scoreValue);
         //destoy animation
        
     }

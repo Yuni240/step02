@@ -310,6 +310,7 @@ MonoBehaviour:
   damage: 2
   explosionPrefab: {fileID: 3857231741951377772, guid: fb26894146e4463429c3137cd4fedfb8, type: 3}
   anim: {fileID: 4859662305648549893}
+  scoreValue: 5
   speed: 10
 --- !u!95 &4859662305648549893
 Animator:

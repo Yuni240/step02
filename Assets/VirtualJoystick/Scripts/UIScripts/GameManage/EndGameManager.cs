@@ -1,10 +1,16 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EndGameManager : MonoBehaviour
 {
     public static EndGameManager endManager;
     public bool gameOver;
+
+    private TextMeshProUGUI scoreTextComponent;
+    private int score;
+
 
     private PanelController panelController;
     void Awake()
@@ -28,7 +34,14 @@ public class EndGameManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+
+    public void UpdateScore(int addScore)
+    {
+        score += addScore;
+        scoreTextComponent.text="Score: "+score.ToString();
+    
+    
+    }  // Update is called once per frame
     void Update()
     {
         
@@ -61,17 +74,36 @@ public class EndGameManager : MonoBehaviour
     }
     public void winGame()
     {
-        
+
+        ScoreSet();
        panelController.ActivateWin();
     }
-    public void LoseGame() { 
-    
+    public void LoseGame() {
+
+        ScoreSet();
     panelController.ActivateLose();
 
+    }
+
+    private void ScoreSet() {
+        PlayerPrefs.SetInt("Score" + SceneManager.GetActiveScene().name, score);
+        int highScore=PlayerPrefs.GetInt("HighScore" +SceneManager.GetActiveScene().name,0);
+
+        if (score > highScore)
+            PlayerPrefs.SetInt("HighScore" + SceneManager.GetActiveScene().name, score);
+
+        //reset score
+        score = 0;
     }
     public void RegisterPanelController(PanelController pC)
     {
         panelController = pC;
 
+    }
+    
+    public void RegisterScoreText(TextMeshProUGUI scoreComp)
+    {
+
+        scoreTextComponent = scoreComp;
     }
 }
