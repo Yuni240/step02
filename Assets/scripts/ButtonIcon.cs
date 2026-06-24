@@ -12,6 +12,8 @@ public class ButtonIcon : MonoBehaviour
 
     private void Awake()
     {
+       // PlayerPrefs.DeleteAll(); // try
+
         int unlockedLvl = PlayerPrefs.GetInt(EndGameManager.endManager.LvlUnlock, firstLevelBuilIndex);
 
         for (int i = 0; i < lvlButton.Length; i++)
@@ -29,7 +31,7 @@ public class ButtonIcon : MonoBehaviour
             {
 
                 lvlButton[i].interactable = false;
-                lvlButton[i].image.sprite = unlockedIcon;
+                lvlButton[i].image.sprite = lockedIcon;
 
                 lvlButton[i].GetComponentInChildren<TextMeshProUGUI>().enabled = false;
             }
