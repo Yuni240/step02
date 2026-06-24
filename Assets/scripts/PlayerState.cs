@@ -28,6 +28,9 @@ public class PlayerState : MonoBehaviour
         health-=damage;
         healthFill.fillAmount=health/maxHealth;
 
+        Anim.SetTrigger("Damage");
+
+
         if (canPlayAnim)
         {
             Anim.SetTrigger("Damage");

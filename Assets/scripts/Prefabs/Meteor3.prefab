@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146b7e9d19165d341917b1beacd93404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meteor
-  Health: 1
+  Health: 3
   rb: {fileID: 7334934551181824459}
   damage: 1
   explosionPrefab: {fileID: 166901331625077302, guid: 8f21fa18181a2e248b9f37d4a1f173a2, type: 3}

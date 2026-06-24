@@ -19,11 +19,13 @@ public class PurpleEnemy : Enemy
     void Update()
     {
        ShootTimer += Time.deltaTime;
-        if(ShootTimer > ShootInterval)
+        if(ShootTimer >= ShootInterval)
          {
-              ShootTimer = 0;
+              //ShootTimer = 0;
               Instantiate(BulletPrefab, LeftCanon.position, Quaternion.identity);
               Instantiate(BulletPrefab, RightCanon.position, Quaternion.identity);
+            ShootTimer = 0;
+
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

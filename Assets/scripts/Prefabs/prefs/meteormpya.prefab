@@ -169,11 +169,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146b7e9d19165d341917b1beacd93404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meteor
-  Health: 0
+  Health: 3
   rb: {fileID: 6114899656409342050}
-  damage: 0
+  damage: 1
   explosionPrefab: {fileID: 0}
   anim: {fileID: 0}
+  scoreValue: 0
   minSpeed: 8
   maxSpeed: 15
   rotateSpeed: 0

@@ -16,7 +16,7 @@ public class PanelController : MonoBehaviour
     public void ActivateWin()
     {
         cGroup.alpha = 1;
-        cGroup.interactable = true;
+       // cGroup.interactable = true;
 
         winScreen.SetActive(true);
     }

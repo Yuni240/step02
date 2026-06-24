@@ -11,6 +11,7 @@ public class EndGameManager : MonoBehaviour
     private TextMeshProUGUI scoreTextComponent;
     private int score;
     public string LvlUnlock = "LevelUnlock";
+    public GameObject[]spawners;
 
     [HideInInspector]
 
@@ -85,13 +86,17 @@ public class EndGameManager : MonoBehaviour
 
         if (nextLevel > PlayerPrefs.GetInt(LvlUnlock, 0))
         {
-            PlayerPrefs.SetInt(LvlUnlock, nextLevel);
+            PlayerPrefs.SetInt(LvlUnlock, nextLevel); 
         }
     }
     public void LoseGame() {
 
         ScoreSet();
     panelController.ActivateLose();
+        foreach (var spawn in spawners)
+        {
+            spawn.SetActive(false);
+        }
 
     }
 

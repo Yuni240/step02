@@ -44,13 +44,13 @@ public class FadeCanvas : MonoBehaviour
         fadeStarted = false;
         while (canvasGroup.alpha > 0)
         {
-           // if(fadeStarted)
+            if(fadeStarted)
             
-               // yield break;
+                yield break;
             
             canvasGroup.alpha -= changeValue;
             yield return new WaitForSeconds(waitTime);
-           // Debug.Log("Fading In");
+           Debug.Log("Fading In");
         }
     }
 
@@ -67,9 +67,9 @@ public class FadeCanvas : MonoBehaviour
         if (canvasGroup.alpha != 0)
             yield break;
         if (fadeStarted)
-        {
+        
             yield break;
-        }
+        
         fadeStarted = true;
         while (canvasGroup.alpha < 1)
         {
@@ -77,7 +77,14 @@ public class FadeCanvas : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
         }
         //SceneManager.LoadScene(levelName);
-        AsyncOperation ao= SceneManager.LoadSceneAsync(levelName);
+          //
+
+       // StartCoroutine(FadeIn());   //
+
+        AsyncOperation ao = SceneManager.LoadSceneAsync(levelName);
+
+       // yield return new WaitForSeconds(0.1f);    //
+
         ao.allowSceneActivation = false;
         loadingScreen.SetActive(true);
 
@@ -100,6 +107,17 @@ public class FadeCanvas : MonoBehaviour
     }
     IEnumerator FadeOut(int levelIndex)
     {
+        if(fadeStarted)
+            yield break;
+
+        fadeStarted = true;
+
+        while (canvasGroup.alpha < 1)
+        {
+            canvasGroup.alpha += changeValue;
+            yield return new WaitForSeconds(waitTime);
+        }
+
         AsyncOperation ao = SceneManager.LoadSceneAsync(levelIndex);
         ao.allowSceneActivation = false;
         loadingScreen.SetActive(true);
@@ -118,7 +136,7 @@ public class FadeCanvas : MonoBehaviour
             yield return null;
         }
 
-        if (fadeStarted)
+       /* if (fadeStarted)
         {
             yield break;
         }
@@ -127,7 +145,7 @@ public class FadeCanvas : MonoBehaviour
         {
             canvasGroup.alpha += changeValue;
             yield return new WaitForSeconds(waitTime);
-        }
+        }*/
         SceneManager.LoadScene(levelIndex);
         yield return new WaitForSeconds(0.1f);    
         StartCoroutine(FadeIn());

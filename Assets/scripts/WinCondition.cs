@@ -17,10 +17,11 @@ public class WinCondition : MonoBehaviour
     void Update()
     {
 
-        if (EndGameManager.endManager.gameOver==true)
-        {
+        if (EndGameManager.endManager.gameOver == true)
             return;
-        }
+        
+           
+        
         timer += Time.deltaTime;
         if (timer >= possibleWinTime)
         {
@@ -31,7 +32,7 @@ public class WinCondition : MonoBehaviour
 
             
             // gameObject.SetActive(false);
-            EndGameManager.endManager.ResolveGame();
+            EndGameManager.endManager.StartResolveSequence();
             gameObject.SetActive(false);
 
         }
