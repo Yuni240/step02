@@ -8,6 +8,7 @@ public class Meteor : Enemy
     [SerializeField] private float maxSpeed;
     private float speed;
     [SerializeField] private float rotateSpeed;
+    [SerializeField] private ScriptableObjectExample powerUpSpawner;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,7 +29,10 @@ public class Meteor : Enemy
         {
         base.DeathSequence();
         Instantiate(explosionPrefab, transform.position, transform.rotation);
-        //Destroy(gameObject);
+
+        if (powerUpSpawner != null)
+            powerUpSpawner.spawnPowerUp(transform.position);
+        Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D otherCollision)
     {

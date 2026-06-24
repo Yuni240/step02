@@ -25,8 +25,8 @@ public class PlayerState : MonoBehaviour
     // Update is called once per frame
     public void PlayerTakeDamage(float damage)
     {
-        health-=damage;
-        healthFill.fillAmount=health/maxHealth;
+        health -= damage;
+        healthFill.fillAmount = health / maxHealth;
 
         Anim.SetTrigger("Damage");
 
@@ -37,22 +37,33 @@ public class PlayerState : MonoBehaviour
             StartCoroutine(AntiSpamAnimation());
 
         }
-        
-        if (health<=0)
+
+        if (health <= 0)
         {
 
-            EndGameManager.endManager.gameOver=true;
+            EndGameManager.endManager.gameOver = true;
             EndGameManager.endManager.StartResolveSequence();
-           
+
             Instantiate(explosionPrefab, transform.position, transform.rotation);
 
             Destroy(gameObject);
         }
     }
-    private IEnumerator AntiSpamAnimation()
-    {
-        canPlayAnim=false;
-        yield return new WaitForSeconds(0.15f);
-        canPlayAnim=true;
+
+        public void AddHealth(int healAmount)
+        {
+         health+=healAmount;
+        if(health>maxHealth) 
+            health=maxHealth;
+
+        healthFill.fillAmount = health / maxHealth;
+
     }
+
+    private IEnumerator AntiSpamAnimation()
+            {
+             canPlayAnim=false;
+             yield return new WaitForSeconds(0.15f);
+             canPlayAnim=true;
+         }
 }
