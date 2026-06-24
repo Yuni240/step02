@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectExample
   spawnThreshold: 80
   powerUp:
-  - {fileID: 6927766350278423042, guid: e9d8278d5934a9048a3fd94d928a9536, type: 3}
+  - {fileID: 5038305910711522587, guid: 35c638236bf833f41be9be0e982e04c8, type: 3}
+  - {fileID: 7942337111815920115, guid: e90e35428b53e70408906aea64288822, type: 3}

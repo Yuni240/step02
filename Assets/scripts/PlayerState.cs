@@ -14,6 +14,8 @@ public class PlayerState : MonoBehaviour
     private float health;
     private bool canPlayAnim=true;
 
+    [SerializeField] private Shield shield;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +27,8 @@ public class PlayerState : MonoBehaviour
     // Update is called once per frame
     public void PlayerTakeDamage(float damage)
     {
+        if (shield.protection)
+            return;
         health -= damage;
         healthFill.fillAmount = health / maxHealth;
 
