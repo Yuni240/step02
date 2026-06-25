@@ -1,28 +1,32 @@
 using UnityEngine;
-
 public class LaserBullet : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float damage;
     [SerializeField] private Rigidbody2D rb;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-      rb.linearVelocity=transform.up*speed;
+        rb.linearVelocity = transform.up * speed;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       Enemy enemy = collision.GetComponent<Enemy>();
-        enemy.TakeDamage(damage);
-        Destroy(gameObject);
+        Debug.Log("Bullet iligonga: " + collision.gameObject.name); // ONGEZA HAPA
+
+        Enemy enemy = collision.GetComponent<Enemy>();
+        if (enemy == null)
+            enemy = collision.GetComponentInParent<Enemy>();
+
+        Debug.Log("Enemy found: " + (enemy != null)); // ONGEZA HAPA
+
+        if (enemy != null)
+        {
+            enemy.TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
+
     private void OnBecameInvisible()
     {
         Destroy(gameObject);

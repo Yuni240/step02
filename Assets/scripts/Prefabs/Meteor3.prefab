@@ -109,9 +109,10 @@ MonoBehaviour:
   Health: 3
   rb: {fileID: 7334934551181824459}
   damage: 1
-  explosionPrefab: {fileID: 166901331625077302, guid: 8f21fa18181a2e248b9f37d4a1f173a2, type: 3}
+  explosionPrefab: {fileID: 3857231741951377772, guid: fb26894146e4463429c3137cd4fedfb8, type: 3}
   anim: {fileID: 0}
   scoreValue: 5
+  powerUpSpawner: {fileID: 11400000, guid: 450585f767a97834f90e32ddb000b388, type: 2}
   minSpeed: 8
   maxSpeed: 15
   rotateSpeed: 100
