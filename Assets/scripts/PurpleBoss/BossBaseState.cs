@@ -10,9 +10,12 @@ public class BossBaseState : MonoBehaviour
     protected float maxUp;
     protected float maxDown;
 
+    protected BossController bossController;
+
 
     private void Awake()
     {
+        bossController = GetComponent<BossController>();
        mainCam=Camera.main; 
     }
     protected virtual void Start()
@@ -30,7 +33,7 @@ public class BossBaseState : MonoBehaviour
 
     public virtual void  StopState()
     {
-
+        StopAllCoroutines();
     }
 
 }
