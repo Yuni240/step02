@@ -14,6 +14,8 @@ public class PlayerState : MonoBehaviour
     private float health;
     private bool canPlayAnim=true;
 
+    private PlayerShooting playerShooting;
+
     [SerializeField] private Shield shield;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,6 +24,7 @@ public class PlayerState : MonoBehaviour
        health=maxHealth;
         healthFill.fillAmount=health/maxHealth;
         EndGameManager.endManager.gameOver=false;
+        playerShooting=GetComponent<PlayerShooting>();
     }
 
     // Update is called once per frame
@@ -41,6 +44,8 @@ public class PlayerState : MonoBehaviour
             StartCoroutine(AntiSpamAnimation());
 
         }
+
+        playerShooting.DecreaseUpgrade();
 
         if (health <= 0)
         {
