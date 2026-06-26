@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 public class ButtonIcon : MonoBehaviour
@@ -27,5 +27,5 @@ public class ButtonIcon : MonoBehaviour
                 lvlButton[i].GetComponentInChildren<TextMeshProUGUI>().enabled = false;
             }
         }
-    } // ? Awake inafunga hapa
+    } // ← Awake inafunga hapa
 }

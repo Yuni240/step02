@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum BossState
 {
@@ -19,7 +19,8 @@ public class BossController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(test)
+        ChangeState(BossState.enter);   // ✅ sahihi
+        if (test)
             ChangeState(testState);
     }
     public void ChangeState(BossState state)

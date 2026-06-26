@@ -174,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2290736702584479554
 Transform:
   m_ObjectHideFlags: 0
@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 5434356015843387442}
   - component: {fileID: 2224684467679337944}
   - component: {fileID: 2648569758785145763}
+  - component: {fileID: 4199777110904868319}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -537,6 +538,7 @@ MonoBehaviour:
   secondRightCanon: {fileID: 929587620573899686}
   leftRotationCanon: {fileID: 6187239009692719455}
   rightRotationCanon: {fileID: 929587620573899686}
+  source: {fileID: 4199777110904868319}
 --- !u!114 &5439576854406310709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,20 +729,190 @@ CompositeCollider2D:
         Y: -3719731
       - X: 6400000
         Y: -3719731
+  - m_Collider: {fileID: 5304974291375742268}
+    m_ColliderPaths:
+    - - X: 538675
+        Y: -6109304
+      - X: 1119912
+        Y: -6017247
+      - X: 1688342
+        Y: -5864938
+      - X: 2237737
+        Y: -5654047
+      - X: 2762079
+        Y: -5386884
+      - X: 3255623
+        Y: -5066375
+      - X: 3712960
+        Y: -4696033
+      - X: 4129081
+        Y: -4279916
+      - X: 4499426
+        Y: -3822581
+      - X: 4819939
+        Y: -3329040
+      - X: 5087105
+        Y: -2804700
+      - X: 5298001
+        Y: -2255306
+      - X: 5450313
+        Y: -1686877
+      - X: 5542375
+        Y: -1105641
+      - X: 5573176
+        Y: -517966
+      - X: 5573176
+        Y: -517940
+      - X: 5542378
+        Y: 69735
+      - X: 5450319
+        Y: 650972
+      - X: 5298009
+        Y: 1219402
+      - X: 5087115
+        Y: 1768798
+      - X: 4819950
+        Y: 2293139
+      - X: 4499439
+        Y: 2786682
+      - X: 4129095
+        Y: 3244019
+      - X: 3712975
+        Y: 3660139
+      - X: 3255639
+        Y: 4030482
+      - X: 2762096
+        Y: 4350993
+      - X: 2237754
+        Y: 4618159
+      - X: 1688359
+        Y: 4829052
+      - X: 1119928
+        Y: 4981362
+      - X: 538691
+        Y: 5073421
+      - X: -48984
+        Y: 5104220
+      - X: -636659
+        Y: 5073421
+      - X: -1217897
+        Y: 4981362
+      - X: -1786327
+        Y: 4829051
+      - X: -2335723
+        Y: 4618158
+      - X: -2860064
+        Y: 4350993
+      - X: -3353606
+        Y: 4030482
+      - X: -3810942
+        Y: 3660139
+      - X: -4227062
+        Y: 3244020
+      - X: -4597406
+        Y: 2786684
+      - X: -4917916
+        Y: 2293142
+      - X: -5185081
+        Y: 1768801
+      - X: -5395974
+        Y: 1219406
+      - X: -5548286
+        Y: 650977
+      - X: -5640344
+        Y: 69740
+      - X: -5671144
+        Y: -517934
+      - X: -5640346
+        Y: -1105609
+      - X: -5548287
+        Y: -1686846
+      - X: -5395978
+        Y: -2255275
+      - X: -5185086
+        Y: -2804671
+      - X: -4917922
+        Y: -3329012
+      - X: -4597413
+        Y: -3822555
+      - X: -4227070
+        Y: -4279892
+      - X: -3810951
+        Y: -4696012
+      - X: -3353616
+        Y: -5066356
+      - X: -2860075
+        Y: -5386867
+      - X: -2335734
+        Y: -5654034
+      - X: -1786340
+        Y: -5864928
+      - X: -1217911
+        Y: -6017240
+      - X: -636674
+        Y: -6109301
+      - X: -48999
+        Y: -6140101
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.203568, y: -0.4681879}
-      - {x: 0.2036267, y: -0.3719731}
+    - - {x: -0.0049012, y: -0.61401004}
+      - {x: 0.0538686, y: -0.6109302}
+      - {x: 0.1119922, y: -0.6017244}
+      - {x: 0.16883451, y: -0.5864935}
+      - {x: 0.2237748, y: -0.565404}
+      - {x: 0.2762076, y: -0.5386884}
+      - {x: 0.325564, y: -0.5066361}
+      - {x: 0.3712968, y: -0.4696025}
+      - {x: 0.412909, y: -0.4279905}
+      - {x: 0.4499427, y: -0.3822577}
+      - {x: 0.4566361, y: -0.3719731}
       - {x: 0.64, y: -0.3719438}
       - {x: 0.6399707, y: -0.057557702}
-      - {x: 0.2035973, y: -0.057528302}
-      - {x: 0.203568, y: 0.4475702}
-      - {x: -0.1795435, y: 0.4475409}
-      - {x: -0.1795729, y: -0.057557702}
+      - {x: 0.5570173, y: -0.0575265}
+      - {x: 0.5573175, y: -0.0517934}
+      - {x: 0.5542376, y: 0.0069746003}
+      - {x: 0.5450316, y: 0.0650981}
+      - {x: 0.52980083, y: 0.1219401}
+      - {x: 0.5087108, y: 0.1768809}
+      - {x: 0.48199502, y: 0.2293136}
+      - {x: 0.4499425, y: 0.2786699}
+      - {x: 0.4129087, y: 0.3244027}
+      - {x: 0.3712964, y: 0.3660148}
+      - {x: 0.3255635, y: 0.4030483}
+      - {x: 0.2762071, y: 0.4351007}
+      - {x: 0.2237741, y: 0.4618163}
+      - {x: 0.1688337, y: 0.4829058}
+      - {x: 0.111991204, y: 0.49813652}
+      - {x: 0.0538676, y: 0.5073422}
+      - {x: -0.0048997, y: 0.51042193}
+      - {x: -0.063667, y: 0.5073419}
+      - {x: -0.1217907, y: 0.4981359}
+      - {x: -0.178633, y: 0.4829048}
+      - {x: -0.2335734, y: 0.46181512}
+      - {x: -0.2860061, y: 0.4350993}
+      - {x: -0.33536232, y: 0.40304682}
+      - {x: -0.381095, y: 0.3660131}
+      - {x: -0.4227071, y: 0.3244009}
+      - {x: -0.4597407, y: 0.27866802}
+      - {x: -0.491793, y: 0.2293117}
+      - {x: -0.5185086, y: 0.1768787}
+      - {x: -0.539598, y: 0.1219384}
+      - {x: -0.554829, y: 0.0650955}
+      - {x: -0.5640345, y: 0.0069724}
+      - {x: -0.5671143, y: -0.0517947}
+      - {x: -0.5668435, y: -0.057557702}
       - {x: -0.64, y: -0.057587}
       - {x: -0.6399707, y: -0.3719731}
-      - {x: -0.1795435, y: -0.3720025}
-      - {x: -0.1795142, y: -0.4681879}
+      - {x: -0.46641082, y: -0.3719851}
+      - {x: -0.4597399, y: -0.3822572}
+      - {x: -0.42270622, y: -0.42799002}
+      - {x: -0.381094, y: -0.4696021}
+      - {x: -0.3353612, y: -0.5066357}
+      - {x: -0.286005, y: -0.5386881}
+      - {x: -0.2335721, y: -0.5654038}
+      - {x: -0.1786318, y: -0.58649343}
+      - {x: -0.1217895, y: -0.6017243}
+      - {x: -0.063665904, y: -0.6109302}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -758,3 +930,100 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShieldActivator
   shield: {fileID: 1283594905265172472}
+--- !u!82 &4199777110904868319
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004558350649112708}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 063e7edb3a9a07e40b79ec1805857f31, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.376
+  m_Pitch: 1.59
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

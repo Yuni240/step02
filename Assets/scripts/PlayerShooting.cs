@@ -19,6 +19,7 @@ public class PlayerShooting : MonoBehaviour
     [Header("Upgrade rotation Points")]
     [SerializeField] private Transform leftRotationCanon;
     [SerializeField] private Transform rightRotationCanon;
+    [SerializeField] private AudioSource source;
 
     private int upgradeLevel = 0;  
 
@@ -58,6 +59,7 @@ public class PlayerShooting : MonoBehaviour
     }
     private void shoot()
     {
+        source.Play();
         // Instantiate(laserBulletPrefab, basicShootingPoint.position, Quaternion.identity);
         switch (upgradeLevel)
         {
