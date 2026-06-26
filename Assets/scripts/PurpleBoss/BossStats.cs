@@ -11,15 +11,23 @@ public class BossStats : Enemy
     }
     public override void DeathSequence()
     {
+        Debug.Log("Boss DeathSequence called");
+
         base.DeathSequence();
+
         bossController.ChangeState(BossState.death);
-        Instantiate(explosionPrefab, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
+
+        Instantiate(explosionPrefab, transform.position,
+            Quaternion.Euler(0, 0, Random.Range(0, 360)));
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("BOSS amegongwa na: " + collision.gameObject.name + " | Tag: " + collision.tag); // ONGEZA HII
+
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerState>().PlayerTakeDamage(damage); // UPDATED: semicolon imeongezwa
+            collision.GetComponent<PlayerState>().PlayerTakeDamage(damage);
         }
     }
 
