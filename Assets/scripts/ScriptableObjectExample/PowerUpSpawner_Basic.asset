@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac360e86a4098649832a1b66b920dcb, type: 3}
   m_Name: PowerUpSpawner_Basic
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectExample
-  spawnThreshold: 80
+  spawnThreshold: 20
   powerUp:
-  - {fileID: 587379358789538912, guid: 35c638236bf833f41be9be0e982e04c8, type: 3}
+  - {fileID: 6230375087557763750, guid: 35c638236bf833f41be9be0e982e04c8, type: 3}
+  - {fileID: 8860513491798480796, guid: 362b5eb99b747364a9aaa5c587a69afe, type: 3}
+  - {fileID: 90296702875207051, guid: e89a9e0f87811134ab2707697a45de59, type: 3}

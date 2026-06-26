@@ -13,6 +13,8 @@ public class BossController : MonoBehaviour
     [SerializeField] private BossState testState;
     [SerializeField] private BossEnter bossEnter;
     [SerializeField] private BossFire bossFire;
+    [SerializeField] private BossSpecial bossSpecial;
+    [SerializeField] private BossDeath bossDeath;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,10 +36,15 @@ public class BossController : MonoBehaviour
                 bossFire.RunState();
                 break;
             case BossState.special:
-                Debug.Log("Do something");
+                //Debug.Log("Do something");
+                bossSpecial.RunState();
                 break;
             case BossState.death:
-                Debug.Log("Do something");
+                //Debug.Log("Do something");
+                bossEnter.StopState();
+                bossFire.StopState();
+                bossSpecial.StopState();
+                bossDeath.RunState();
                 break;
         }
     }
