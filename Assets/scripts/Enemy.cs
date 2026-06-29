@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         Health -= dmg;
+        Debug.Log(gameObject.name + " amepokea damage: " + dmg + " | Health sasa: " + Health); // ONGEZA HII
         HurtSequence();
         if (Health <= 0)
         {

@@ -12,10 +12,11 @@ public class LaserBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Bullet iligonga: " + collision.gameObject.name);
         Enemy enemy = collision.GetComponent<Enemy>();
         if (enemy == null)
             enemy = collision.GetComponentInParent<Enemy>();
-
+        Debug.Log("Enemy found: " + (enemy != null));
         if (enemy != null)
         {
             enemy.TakeDamage(damage);

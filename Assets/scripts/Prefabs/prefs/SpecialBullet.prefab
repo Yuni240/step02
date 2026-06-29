@@ -363,7 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpecialBullet
   damage: 3
   speed: 2
-  rotateSpeed: 3
+  rotateSpeed: 300
   rb: {fileID: 1667245419784203190}
   miniBullet: {fileID: 6239856506579414104, guid: 39cc2ebd1d008eb4d9e1b45f88a5423e, type: 3}
   spawnPoint:
